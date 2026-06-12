@@ -53,6 +53,12 @@ public class Main {
 
         linkedWebPagesW.print();
 
+        System.out.println("\n****************************************\n");
+
+        linkedWebPagesW.removeNode(instagramW);
+        linkedWebPagesW.removeLink(googleW, linkedinW);
+        linkedWebPagesW.print();
+
     }
 
 }
