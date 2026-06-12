@@ -22,7 +22,6 @@ public class Main {
         linkedWebPagesNonW.addLink(instagram, github, -1);
 
         linkedWebPagesNonW.addLink(github, linkedin, -1);
-        linkedWebPagesNonW.addLink(github, instagram, -1);
 
         linkedWebPagesNonW.addLink(linkedin, twitch, -1);
 
@@ -45,7 +44,7 @@ public class Main {
         linkedWebPagesW.addLink(googleW, instagramW, 3);
         linkedWebPagesW.addLink(googleW, linkedinW, 2);
 
-        linkedWebPagesW.addLink(instagramW, githubW, 5);
+        linkedWebPagesW.addLink(instagramW, githubW, 6);
 
         linkedWebPagesW.addLink(githubW, linkedinW, 3);
         linkedWebPagesW.addLink(githubW, instagramW, 6);
