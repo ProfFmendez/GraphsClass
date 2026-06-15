@@ -29,15 +29,3 @@ javac -d out src/Graphs/*.java ; java -cp out Graphs.Main
 ```
 
 Esto compilará las clases en el directorio `out` y ejecutará la clase `Graphs.Main`.
-
-Sugerencias para tareas
------------------------
-- Añade métodos en `Graph` para buscar nodos por índice o devolver Optional<Node>.
-- Implementa BFS/DFS que devuelva el orden de visita y la distancia mínima
-  (en caso de grafos no ponderados BFS puede usarse para distancia mínima en aristas).
-- Implementa Dijkstra usando una cola de prioridad para grafos ponderados.
-
-Si necesitas, puedo:
-- Añadir plantillas de métodos para BFS/DFS/Dijkstra en este proyecto.
-- Proveer tests o casos de ejemplo para que los estudiantes validen sus
-  implementaciones.
