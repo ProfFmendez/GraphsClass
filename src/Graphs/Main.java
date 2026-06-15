@@ -1,11 +1,19 @@
 package Graphs;
 
+/**
+ * Clase de demostración que construye dos grafos sencillos y muestra el uso
+ * de los métodos de la API: añadir nodos, añadir/quitar enlaces, eliminar
+ * nodos y mostrar el grafo por consola.
+ *
+ */
 public class Main {
 
     public static void main (String[] args){
 
         /*
-         * Here we have a non-weighted and non-directed graph
+         * Ejemplo 1: grafo no ponderado y no dirigido.
+         * - isWeighted = false  -> los pesos serán ignorados (se usan -1)
+         * - isDirected = false  -> al añadir un enlace también se añade el inverso
          */
 
         Graph linkedWebPagesNonW = new Graph(false, false);
@@ -18,11 +26,8 @@ public class Main {
 
         linkedWebPagesNonW.addLink(google, instagram, -1);
         linkedWebPagesNonW.addLink(google, linkedin, -1);
-
         linkedWebPagesNonW.addLink(instagram, github, -1);
-
         linkedWebPagesNonW.addLink(github, linkedin, -1);
-
         linkedWebPagesNonW.addLink(linkedin, twitch, -1);
 
         linkedWebPagesNonW.print();
@@ -30,7 +35,9 @@ public class Main {
         System.out.println("\n****************************************\n");
 
         /*
-         * Here we have a weighted and directed graph
+         * Ejemplo 2: grafo ponderado y dirigido.
+         * Aquí los pesos tienen significado y no se añaden enlaces inversos
+         * automáticamente porque isDirected = true.
          */
 
         Graph linkedWebPagesW = new Graph(true, true);
@@ -43,14 +50,18 @@ public class Main {
 
         linkedWebPagesW.addLink(googleW, instagramW, 3);
         linkedWebPagesW.addLink(googleW, linkedinW, 2);
-
         linkedWebPagesW.addLink(instagramW, githubW, 6);
-
         linkedWebPagesW.addLink(githubW, linkedinW, 3);
         linkedWebPagesW.addLink(githubW, instagramW, 6);
-
         linkedWebPagesW.addLink(linkedinW, twitchW, 1);
 
+        linkedWebPagesW.print();
+
+        System.out.println("\n****************************************\n");
+
+        // Demostración de eliminación de nodos y enlaces
+        linkedWebPagesW.removeNode(instagramW);
+        linkedWebPagesW.removeLink(googleW, linkedinW);
         linkedWebPagesW.print();
 
     }
