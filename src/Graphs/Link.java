@@ -1,5 +1,11 @@
 package Graphs;
 
+/**
+ * Representa una arista/enlace entre dos nodos del grafo.
+ * startNode -> endNode con un posible peso (weight). En grafos no ponderados
+ * el campo weight puede tomar un valor por defecto (-1) que indica ausencia
+ * de peso significativo.
+ */
 public class Link {
 
     //Attributes
